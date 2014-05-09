@@ -1,0 +1,327 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>|| HESH OPTO-LAB PVT. LTD. || Powered By CONOSCENZ TECHNOLOGY</title>
+<script type="text/javascript" src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" href="../css/jquery.treeview.css" />
+
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script src="../js/jquery.treeview.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#tree").treeview({
+			collapsed: false,
+			animated: "medium",
+			control:"#sidetreecontrol",
+			persist: "location"
+		});
+	})
+	
+</script>
+</head>
+<body>
+
+<div align="center" id="FreezePane" class="FreezePaneOn"></div>
+
+
+
+<link rel="stylesheet" type="text/css" href="../css/menu.css" />
+<script type="text/javascript" src="../js/menu.js"></script>
+<script type="text/javascript">
+    ddlevelsmenu.setup("ddtopmenubar", "topbar");
+	document.documentElement.style.overflow = "hidden";
+</script> 
+<table width="100%" class="appHeader">
+	<tr>
+	<td valign="middle"><label style="color: white; font-size: 20px; ">HESH OPTO-LAB PVT. LTD.</label></td>
+	<td align="right" valign="bottom" style="font-size: 11px; color: white;"><div style="padding-bottom: 4px;"> Access Point : <font style="background-color: yellow; font-weight : bolder; color: red; padding-left: 3px; padding-right: 3px; font-style: italic; "><span onclick="fnToggleAccessPointLst();" style="cursor: pointer;">Salesman</span><img onclick="fnToggleAccessPointLst();" alt="arrow" style="padding-left: 5px; cursor: pointer;" src="images/arrow-down.gif"> </font></div> Pending Approval : <a href="#">Request(5)</a> / <a href="#" >Demand(2)</a> | Welcome SHAH | <a href="javascript: fnLogout();">Logout</a></td>
+	</tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #8A2BE2; color: white; min-width: 1000px;">
+	<tr>
+		<td valign="top">
+			<div id="ddtopmenubar" class="mattblackmenu">
+				<ul>
+					<li>
+						<a href="#" rel="masterSubMenu"><b>Master Settings</b> </a>
+					</li>
+					<li>
+						<a href="#" rel="enquirySubMenu"><b>Enquiry</b> </a>
+					</li>
+					<li>
+						<a href="#" rel="quotationMenu"><b>Quotation</b>
+						</a>
+					</li>
+					<li>
+						<a href="#" rel="orderMenu"><b>Order</b>
+						</a>
+					</li>
+					<li>
+						<a href="#" rel="salesmanSubMenu"><b>Salesman</b> </a>
+					</li>
+					<li>
+						<a href="#" rel="messageSubMenu"><b>Messages</b> </a>
+					</li>
+				</ul>
+			</div>
+		</td>
+		<td align="right" style="padding-right: 20px;">
+			<a href="javascript:fnHelp();"><img alt="help" src="images/help.gif"> <font style="font-size: small; color: orange; font-weight: bold; text-decoration: underline;">Help</font> </a>
+		</td>
+	</tr>
+</table>
+<ul id="masterSubMenu" class="ddsubmenustyle">
+	<li>
+		<a href="#">Customer Settings</a>
+		<ul>
+			<li>
+				<a href="#">Customer Group</a>
+				<ul>
+					<li>
+						<a href="#" onclick="fnGoToPage('CUSTOMER_GRP_HANDLER','');">New Customer Group</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Customer</a>
+				<ul>
+					<li>
+						<a href="#" onclick="fnGoToPage('CUSTOMER_HANDLER','INIT_CUSTOMER');">New Customer</a>
+					</li>
+					<li>
+						<a href="#" onclick="fnGoToPage('CUSTOMER_HANDLER','MOD_CUSTOMER');">Modify Customer</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" onclick="fnGoToPage('CUSTOMER_HANDLER','INIT_VIEW_CUSTOMER');">View Customer Details</a>
+		</ul>
+	</li>
+	<li>
+		<a href="#">Price List</a>
+		<ul>
+			<li>
+				<a href="#" onclick="fnPrintPriceList();">Retail Price List</a>
+			</li>
+			<li>
+				<a href="#" onclick="fnPrintWholesalesPriceList();">Wholesales Price List</a>
+			</li>
+			<li>
+				<a href="#" onclick="fnPrintOfferPriceList();">Offer Price List</a>
+			</li>
+			<li>
+				<a href="#" onclick="fnGoToPage('ITM_HANDLER','EMAIL_PRICE_LIST');">Email Price List</a>
+			</li>
+		</ul>
+	</li>
+</ul>
+<ul id="enquirySubMenu" class="ddsubmenustyle">
+	<li>
+		<a href="#" onclick="fnGoToPage('ENQUIRY_HANDLER','INIT_ENQUIRY');">New Enquiry</a>
+	</li>
+	<li>
+		<a href="#" onclick="fnGoToPage('SALESMAN_ENQUIRY_HANDLER','');">Enquiry Appointment</a>
+	</li>
+</ul>
+<ul id="quotationMenu" class="ddsubmenustyle">
+	<li>
+		<a href="#" onclick="fnGoToPage('SALESMAN_QUOTATION_HANDLER','');">Quotation Invoice</a>
+	</li>
+	<li>
+		<a href="#" onclick="fnGoToPage('SALESMAN_QUOTATION_HANDLER','INIT_VIEW_EDIT_QUOTATION');">View / Edit Quotation</a>
+	</li>
+</ul>
+<ul id="orderMenu" class="ddsubmenustyle">
+	<li>
+		<a href="#" onclick="fnGoToPage('SALESMAN_ORDER_HANDLER','');">New Order</a>
+	</li>
+	<li>
+		<a href="#" onclick="fnGoToPage('SALESMAN_ORDER_HANDLER','INIT_VIEW_EDIT_ORDER');">View / Edit Order</a>
+	</li>
+	<li>
+		<a href="#" onclick="fnGoToPage('SALESMAN_ORDER_HANDLER','INIT_FOLLOWUP');">Order Followups</a>
+	</li>
+</ul>
+<ul id="salesmanSubMenu" class="ddsubmenustyle">
+	<li>
+		<a href="#" onclick="fnGoToPage('SALESMAN_DLY_HANDLER','INIT_SALESMAN_DLY');">Daily Report</a>
+	</li>
+	<li>
+		<a href="#" onclick="fnGoToPage('SALESMAN_DLY_HANDLER','VIEW_SALESMAN_RPT');">View Daily Report</a>
+	</li>
+	<li>
+		<a href="#" onclick="fnGoToPage('SALESMAN_DLY_HANDLER','INIT_SALESMAN_STATUS_RPT');">Status Report</a>
+	</li>
+</ul>
+<ul id="messageSubMenu" class="ddsubmenustyle">
+	<li>
+		<a href="#" onclick="fnGoToPage('MESSENGER_HANDLER','');">New Conversation</a>
+	</li>
+	<li>
+		<a href="#" onclick="fnGoToPage('MESSENGER_HANDLER','MY_CONVERSATION');">My Conversations</a>
+	</li>
+</ul>
+
+
+<div id="accessPntList" style="position:absolute; background: #8A2BE2; border: 1px; border-color: black; border-style: solid; top: 38px; right: 10px; display: none;">
+	<table border=0 style="width : 200px; padding: 2px; color: white; font-weight: bold; font-size: 9px;">
+ 
+	<tr><td align="right" style="padding: 2px; cursor: pointer;" onmouseover="this.style.background = 'orange';" onmouseout="this.style.background = 'transparent';"  onclick="fnChangeAccessPoint(0);">ADMIN</td></tr>
+ 
+	<tr><td align="right" style="padding: 2px; cursor: pointer;" onmouseover="this.style.background = 'orange';" onmouseout="this.style.background = 'transparent';"  onclick="fnChangeAccessPoint(1);">SALESMAN</td></tr>
+ 
+	<tr><td align="right" style="padding: 2px; cursor: pointer;" onmouseover="this.style.background = 'orange';" onmouseout="this.style.background = 'transparent';"  onclick="fnChangeAccessPoint(2);">ACCOUNTS</td></tr>
+ 
+	<tr><td align="right" style="padding: 2px; cursor: pointer;" onmouseover="this.style.background = 'orange';" onmouseout="this.style.background = 'transparent';"  onclick="fnChangeAccessPoint(3);">EXHIBITION</td></tr>
+ 
+	<tr><td align="right" style="padding: 2px; cursor: pointer;" onmouseover="this.style.background = 'orange';" onmouseout="this.style.background = 'transparent';"  onclick="fnChangeAccessPoint(11);">HS CHENNAI - CHENNAI</td></tr>
+ 
+	<tr><td align="right" style="padding: 2px; cursor: pointer;" onmouseover="this.style.background = 'orange';" onmouseout="this.style.background = 'transparent';"  onclick="fnChangeAccessPoint(12);">HS BANGALORE - BANGALORE</td></tr>
+ 
+	<tr><td align="right" style="padding: 2px; cursor: pointer;" onmouseover="this.style.background = 'orange';" onmouseout="this.style.background = 'transparent';"  onclick="fnChangeAccessPoint(13);">HS ERNAKULAM - ERNAKULAM</td></tr>
+ 
+	<tr><td align="right" style="padding: 2px; cursor: pointer;" onmouseover="this.style.background = 'orange';" onmouseout="this.style.background = 'transparent';"  onclick="fnChangeAccessPoint(14);">HS DISPATCH - CHENNAI</td></tr>
+ 
+	<tr><td align="right" style="padding: 2px; cursor: pointer;" onmouseover="this.style.background = 'orange';" onmouseout="this.style.background = 'transparent';"  onclick="fnChangeAccessPoint(15);">HS CONTACT LENS - CHENNAI</td></tr>
+ 
+	<tr><td align="right" style="padding: 2px; cursor: pointer;" onmouseover="this.style.background = 'orange';" onmouseout="this.style.background = 'transparent';"  onclick="fnChangeAccessPoint(16);">HS LENS CENTER - CHENNAI</td></tr>
+ 
+	<tr><td align="right" style="padding: 2px; cursor: pointer;" onmouseover="this.style.background = 'orange';" onmouseout="this.style.background = 'transparent';"  onclick="fnChangeAccessPoint(17);">HESH EYE BOUTIQUE MANDAVELI - CHENNAI</td></tr>
+ 
+	<tr><td align="right" style="padding: 2px; cursor: pointer;" onmouseover="this.style.background = 'orange';" onmouseout="this.style.background = 'transparent';"  onclick="fnChangeAccessPoint(18);">HS HYDERABAD - HYDERABAD</td></tr>
+
+	</table>
+</div>
+
+<script type="text/javascript">
+function fnToggleAccessPointLst(){
+	document.getElementById("accessPntList").style.display = (document.getElementById("accessPntList").style.display == 'none') ? 'block' : 'none';
+}
+
+function fnChangeAccessPoint(id){
+	if(id != 1){
+		document.forms[0].changeAccessPoint.value = id;
+		document.forms[0].HANDLERS.value = "LOGIN_HANDLER";
+		document.forms[0].ACTIONS.value = "CHANGE_ACCESS_POINT";
+		fnFinalSubmit();
+	}
+	fnToggleAccessPointLst();
+}
+</script>
+<form method="post" name="frmAddAccessPoint">
+	<div class="loginClass">
+		<fieldset>
+			<legend class="screenHeader">SADASD</legend>
+			
+
+
+
+
+				<table width="100%" border="1" cellpadding="5" cellspacing="0" style="min-width: 300px;border:#837E7C solid 1px;">
+					<tr style="background-color: #E5E4E2; color: black;">
+						<td valign="top">Owner : SHAH</td>
+						<td>Time Posted : 09/07/2013 05:22 PM</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="background-color: #E5E4E2; color: black; padding-top: 5px;">USERS : 
+							
+							<label style="background-color: yellow; color: red; padding: 2px; margin: 2px;">RAJUSTAFF</label>
+							
+							<label style="background-color: yellow; color: red; padding: 2px; margin: 2px;">RAMESH K</label>
+							
+							<label style="background-color: yellow; color: red; padding: 2px; margin: 2px;">RANJIT KUMAR</label>
+							
+							<label style="background-color: yellow; color: red; padding: 2px; margin: 2px;">SHAH</label>
+							
+							</td>
+					</tr>
+				</table>
+			<table width="100%" align="center">
+				<tr>
+					<td align="center"><input type="button" value="ADD COMMENT" onclick="fnComment(0);"/></td>
+				</tr>
+			</table>
+			
+				<ul id="tree"><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(6);"/></td><td align="right" style="width:75px;">09/07/2013 05:22 PM</td></tr></table><hr>TESTING</div><ul><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(12);"/></td><td align="right" style="width:75px;">09/07/2013 06:37 PM</td></tr></table><hr>sdasdasdasdasd</div></li><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(13);"/></td><td align="right" style="width:75px;">09/07/2013 06:37 PM</td></tr></table><hr>sdasdasdasd</div></li></ul></li><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Download" onclick="window.open('/HESH_MESSENGER_FILES/7/tkt.pdf','','status=1,scrollbars=1, top=0, left=0,width='+(screen.width-10)+',height='+(screen.height-120));" align="right" style="background-image: url(images/ui-icons_ffffff_256x240.png);background-position: -224px -48px;width: 16px;height: 16px;float: right;margin: 0 0px;display: block;text-indent: -99999px;overflow: hidden;background-repeat: no-repeat;" /><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(7);"/></td><td align="right" style="width:75px;">09/07/2013 05:22 PM</td></tr></table><hr>SALES TAX EXCEL</div><ul><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(8);"/></td><td align="right" style="width:75px;">09/07/2013 05:23 PM</td></tr></table><hr>ERROR IN THIS PART OF THE EXCEL PLEASE SOLVE</div></li><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(10);"/></td><td align="right" style="width:75px;">09/07/2013 06:36 PM</td></tr></table><hr>asdasdasdsde</div><ul><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(11);"/></td><td align="right" style="width:75px;">09/07/2013 06:36 PM</td></tr></table><hr>sadasdsd</div><ul><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(14);"/></td><td align="right" style="width:75px;">10/07/2013 11:16 AM</td></tr></table><hr>sadasdasd</div><ul><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(15);"/></td><td align="right" style="width:75px;">10/07/2013 11:16 AM</td></tr></table><hr>sadasdasdasd</div><ul><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(16);"/></td><td align="right" style="width:75px;">10/07/2013 11:16 AM</td></tr></table><hr>sadasdasdasdasd</div><ul><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(17);"/></td><td align="right" style="width:75px;">10/07/2013 11:16 AM</td></tr></table><hr>sadasdasdasd</div></li></ul></li><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(19);"/></td><td align="right" style="width:75px;">10/07/2013 11:16 AM</td></tr></table><hr>sadasdasd</div></li></ul></li></ul></li><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(18);"/></td><td align="right" style="width:75px;">10/07/2013 11:16 AM</td></tr></table><hr>asdasdasdasd</div><ul><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(20);"/></td><td align="right" style="width:75px;">10/07/2013 11:17 AM</td></tr></table><hr>sadasdasd</div></li></ul></li></ul></li></ul></li></ul></li><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(21);"/></td><td align="right" style="width:75px;">10/07/2013 11:17 AM</td></tr></table><hr>sadasdasdas</div><ul><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(25);"/></td><td align="right" style="width:75px;">10/07/2013 11:25 AM</td></tr></table><hr>dasdsdasd</div></li></ul></li><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(22);"/></td><td align="right" style="width:75px;">10/07/2013 11:18 AM</td></tr></table><hr>sadasdasdas</div></li><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(23);"/></td><td align="right" style="width:75px;">10/07/2013 11:18 AM</td></tr></table><hr>sadasdasdas</div></li><li><div style="background-color:#E5E4E2; width: 500px; border:#837E7C solid 1px; -moz-border-radius: 5px; border-radius: 5px; padding:5px;"><table width="100%" cellspacing=0 style="font-size:8px;color:blue;"><tr><td style="width:300px;">SHAH</td><td align="right"><input type="button" style="height:16px; font-size:9px;" value="Reply" onclick="fnComment(24);"/></td><td align="right" style="width:75px;">10/07/2013 11:18 AM</td></tr></table><hr>sadasdasdas</div></li></ul>
+			
+		</fieldset>
+		<table style="width: 100%;"><tr><td align="right"><label style="color: blue; font-size: 9px;">Powered By <a href="javascript:window.open('http://www.conoscenz.com');" style="font-family: Castellar;">CONOSCENZ TECHNOLOGY</a></label></td></tr></table>
+<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+<input type="hidden" name="changeAccessPoint" />
+	</div>
+	<div id="taskWindow" style="display: none; width:400px; background-color:#D3BECF; border:#2E0854 solid 3px; -moz-border-radius: 10px; border-radius: 10px; -moz-box-shadow: -2px -2px 3px #d9d9d9; -webkit-box-shadow: -2px -2px 3px #d9d9d9; box-shadow: -2px -2px 3px #d9d9d9; padding:10px; position: fixed; margin-left:30%; top:10%; z-index:1002;">
+		<fieldset>
+			<legend style="font-weight: bold; color: blue;">Comment</legend>
+			<table cellspacing="5">
+				<tr>
+					<td align="right" valign="top">Parent ID :</td>
+					<td><input type="text" name="txtParentId" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td align="right" valign="top">Description :</td>
+					<td><textarea style="text-transform: uppercase;" name="taDescription" cols="50" rows="5"></textarea></td>
+				</tr>
+				<tr>
+					<td align="right">File :</td>
+					<td><input name="file" type="file"/></td>
+				</tr>
+				<tr>
+					<td align="center" colspan="2"><input type="button" value="Send" onclick="fnSave();"/> <input type="button" value="Reset" onclick="fnReset();"/> <input type="button" value="Cancel" onclick="fnCancel();"/></td>
+				</tr>
+			</table>
+		</fieldset>
+	</div>
+	<input type="hidden" name="txtConversationId" value="2"/>
+	<input type="hidden" name="HANDLERS"/>
+	<input type="hidden" name="ACTIONS"/>
+</form>
+<script type="text/javascript">
+function fnComment(parentId){
+	document.forms[0].txtParentId.value = parentId;
+	var outerPane = document.getElementById('FreezePane');
+	if (outerPane) outerPane.className = 'FreezePaneOn';
+	document.documentElement.style.overflow = "hidden";
+	document.getElementById("taskWindow").style.display = 'block';
+	return;
+}
+
+function fnReset(){
+	//document.forms[0].txtParentId.value= '';
+	document.forms[0].taDescription.value= '';
+	document.forms[0].file.value = '';
+	return;
+}
+
+function fnCancel(){
+	document.forms[0].txtParentId.value= '';
+	document.forms[0].taDescription.value= '';
+	document.forms[0].file.value = '';
+	document.documentElement.style.overflow = "visible";
+	var outerPane = document.getElementById('FreezePane');
+	if (outerPane) outerPane.className = 'FreezePaneOff';
+	document.getElementById("taskWindow").style.display = 'none';
+	return;	
+}
+
+function fnSave(){
+	if(document.forms[0].taDescription.value == ''){
+		alert('Please provide description.');
+		return;
+	}
+	document.forms[0].enctype="multipart/form-data";
+	document.forms[0].HANDLERS.value = 'MESSENGER_HANDLER';
+	document.forms[0].ACTIONS.value = 'ADD_COMMENT';
+	fnFinalSubmit();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+/* ######### Drop Down ULs CSS ######### */
+
+
+.ddsubmenustyle, .ddsubmenustyle ul{ /*topmost and sub ULs, respectively*/
+font: normal 13px Verdana;
+margin: 0;
+padding: 0;
+position: absolute;
+left: 0;
+top: 0;
+list-style-type: none;
+background: white;
+border: 1px solid black;
+border-bottom-width: 0;
+visibility: hidden;
+z-index: 100;
+}
+
+.ddsubmenustyle li a{
+display: block;
+min-width: 140px; /*width of menu (not including side paddings)*/
+color: white;
+background-color:#8A2BE2;
+text-decoration: none;
+padding: 4px 4px;
+border-bottom: 1px solid black;
+}
+
+* html .ddsubmenustyle li{ /*IE6 CSS hack*/
+display: inline-block;
+width: 170px; /*width of menu (include side paddings of LI A*/
+}
+
+.ddsubmenustyle li a:hover{
+background-color: #330033;
+color: white;
+}
+
+
+/* ######### Neutral CSS  ######### */
+
+.downarrowpointer{ /*CSS for "down" arrow image added to top menu items*/
+padding-left: 2px;
+border: 0;
+}
+
+.rightarrowpointer{ /*CSS for "right" arrow image added to drop down menu items*/
+position: absolute;
+padding-top: 3px;
+left: 100px;
+border: 0;
+}
+
+.ddiframeshim{
+position: absolute;
+z-index: 500;
+background: transparent;
+border-width: 0;
+width: 0;
+height: 0;
+display: block;
+}
+
+/* ######### Matt Black Strip Main Menu Bar CSS ######### */
+
+.mattblackmenu ul{
+color: white;
+margin: 0;
+padding: 0;
+font: bold 12px Verdana;
+list-style-type: none;
+border-bottom: 1px solid #8A2BE2;
+background-image:../Images/top_mainmenu_bg.gif;
+overflow: hidden;
+width: 100%;
+}
+
+.mattblackmenu li{
+color : white;
+display: inline;
+margin: 0;
+}
+
+.mattblackmenu li a{
+color : white;
+float: left;
+display: block;
+text-decoration: none;
+margin: 0;
+padding: 6px 8px; /*padding inside each tab*/
+border-right: 1px solid #8A2BE2; /*right divider between tabs*/
+background-image:../Images/top_mainmenu_bg.gif;
+}
+
+.mattblackmenu li a:visited{
+color : white;
+}
+
+.mattblackmenu li a:hover{
+color : white;
+background: #330033; /*background of tabs for hover state */
+}
+
+.mattblackmenu a.selected{
+color : white;
+background: #330033; /*background of tab with "selected" class assigned to its LI */
+}
+/* ######### Marker List Vertical Menu ######### */
+
+.markermenu{
+width: 175px; /*width of side bar menu*/
+clear: left;
+position: relative; /*Preserve this for "right" arrow images (added by script) to be positioned correctly*/
+
+}
+
+.markermenu ul{
+list-style-type: none;
+margin: 5px 0;
+padding: 0;
+border: 1px solid #8A2BE2;
+}
+
+.markermenu ul li a{
+background: #F2F2F2 url(bulletlist.gif) no-repeat 3px center; /*light gray background*/
+font: bold 13px "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+color: #00014e;
+display: block;
+width: auto;
+padding: 3px 0;
+padding-left: 20px;
+text-decoration: none;
+border-bottom: 1px solid #8A2BE2;
+}
+
+* html .markermenu ul li a{ /*IE6 hack*/
+width: 155px;
+}
+
+.markermenu ul li a:visited, .markermenu ul li a:active{
+color: #00014e;
+}
+
+.markermenu ul li a:hover, .markermenu ul li a.selected{
+color: white;
+background-color: #330033;
+}
+
+/* ######### Customized Drop Down ULs CSS (inherits from ddlevelsmenu-base.css) ######### */
+
+.blackwhite li a{
+background: white;
+}
+
+.blackwhite li a:hover{
+background: #330033;
+color: white;
+}

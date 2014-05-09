@@ -1,0 +1,270 @@
+@CHARSET "ISO-8859-1";
+
+.formClass {
+	background:#D3BECF;
+	//background: #C7C7C7;
+    padding:10px;
+    min-width: 980px;
+}
+
+.loginClass {
+	background:#D3BECF;
+    padding:10px;
+    min-width: 980px;
+}
+
+
+.appHeader {
+	background: #2E0854;
+    padding:10px 5px 5px;
+    min-width: 1000px;
+}
+
+.appHeader h1 {
+	color : #f4f4f4;
+    font: normal 20px tahoma,arial,helvetica;
+}
+
+.appHeader a:link {
+    color: orange;
+}
+.appHeader a:visited {
+    color: orange;
+}
+.appHeader a:active {
+    color: green;
+}
+.appHeader a:hover {
+    color: aqua;
+}
+.appMenu {
+	height : 30px;
+	border-top-style : solid;
+	border-bottom-style : solid;
+	border-bottom: 1px;
+	border-top: 1px;
+	border-bottom-color: black;
+	border-top-color: black;
+	background : #8A2BE2;
+}
+
+body {
+	margin : 0px;
+}
+
+html,body,div,dl,dt,dd,ul,ol,li,pre,form,fieldset,input,select,textarea {
+	font:normal 11.5px tahoma,arial,helvetica;
+}
+
+.screenHeader{
+	color : #0000FF;
+	font-size: 15px;
+	padding-bottom: 2px;
+}
+
+.pageSubHeader{
+	color : #991100;
+	font-weight : bold;
+	font-size: 13px;
+	padding-bottom: 2px;
+}
+
+.subHeader{
+	color : #6633FF;
+	font-size: 13px;
+	padding-bottom: 6px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family:"Times New Roman", Times, serif;
+  font-weight:normal;
+  color:#222;
+  margin:0 0 0 0;
+}
+
+body {
+	background-color: #EDEDED;
+}
+
+.screenBody {
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.menuItem {
+	color: white;
+	font: normal 13px tahoma,arial,helvetica;
+	font-weight: bold;
+	padding-left: 15px;
+	padding-top: 5px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+.dataTable{
+}
+
+#dataTable table{
+	border-top: 1px;
+	border-left: 1px;
+}
+
+#dataTable table td{
+	border-bottom: 1px;
+	border-right: 1px;
+}
+
+#nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 2px 0;
+	padding: 0;
+	list-style: none;
+	background-color: #8A2BE2;
+}
+
+#nav li {
+	float: left; 
+	color : white;	
+}
+
+#nav li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	border-right: 1px solid #ccc; 
+}
+
+#nav li a:hover {
+	color: orange;
+//	background-color: blue; 
+}
+
+#subMenu {
+	width: 100%;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0;
+	border-top : 1px;
+	border-bottom : 1px;
+	border-top-color : white;
+	border-bottom-color : white;
+	list-style: none;
+	background-color: #8A2BE2;
+}
+
+#subMenu li {
+	border : 1px;
+	border-color: white; 
+	color : white;	
+}
+
+#subMenu li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	border-right: 1px solid #ccc; 
+}
+
+#subMenu li a:hover {
+	color: orange;
+//	background-color: blue; 
+}
+
+ a:link {
+    color: blue;
+}
+ a:visited {
+    color: blue;
+}
+ a:active {
+    color: green;
+}
+ a:hover {
+    color: red;
+}
+
+#suggest{
+	position:absolute;
+	background:#fff;
+	width:150px;
+	}
+
+#suggest div{
+	background:#fff;
+	color:#000;
+	padding-left:4px;
+	cursor:hand;
+	text-align:left;
+	}
+
+#suggest div.over{
+	color:#fff;
+	background:#000;
+}
+
+.suggestionsBox {
+    position: absolute;
+    margin: 0px 0px 0px 0px;
+    width: 500px;
+    background-color: #ffffff;
+    -webkit-border-radius: 3px;
+    border: 1px solid #cccccc;  
+    display: none;  
+    color: #000;
+}
+
+.suggestionList {
+    margin: 0px;
+    padding: 0px;
+}
+
+.suggestionList li {
+    list-style: none;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.suggestionList li:hover {
+    background-color: #ffffcc;
+}
+
+.FreezePaneOff
+  {
+     visibility: hidden;
+     display: none;
+     position: absolute;
+     top: -100px;
+     left: -100px;
+  }
+
+  .FreezePaneOn
+  {
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     visibility: visible;
+     display: block;
+     width: 100%;
+     height: 100%;
+     background-color: white;
+     z-index: 999;
+     opacity: 0.2;
+     filter:alpha(opacity=20);
+     -moz-opacity:0.20;
+     padding-top: 20%;
+  }
+
+  .InnerFreezePane
+  {
+     text-align: center;
+     width : 90px;
+     background-color: #D3BECF;
+     color: black;
+     border: dotted 1px #111;
+     padding: 5px;
+  }
